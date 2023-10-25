@@ -18,7 +18,7 @@ btn.addEventListener("click", () => {
   }
 });
 
-function generate(user_input) {
+/* function generate(user_input) {
     qr_code_element.style.display = "";
     qr_code_element.style.marginTop = "20px"; 
     qr_code_element.style.marginBottom = "20px"; 
@@ -46,24 +46,58 @@ function generate(user_input) {
         downloadLink.href = addWhiteBackground(qr_code_img.getAttribute("src")); 
       }, 300);
     }
-  }
+  } */
+
+  function generate(user_input) {
+    qr_code_element.style.display = "";
+    qr_code_element.style.marginTop = "20px";
+    qr_code_element.style.marginBottom = "20px";
+
+    var qrcode = new QRCode(qr_code_element, {
+        text: `${user_input.value}`,
+        width: 180,
+        height: 180,
+        colorDark: "#000000",  // Warna kotak-kotak QR code menjadi merah
+        colorLight: "#ffffff",  // Warna latar belakang QR code
+        correctLevel: QRCode.CorrectLevel.H,
+    });
+
+    let qr_code_img = document.querySelector(".qr-code img");
+    let qr_code_canvas = document.querySelector("canvas");
+
+    if (qr_code_img.getAttribute("src") == null) {
+        setTimeout(() => {
+            downloadLink.style.display = "block";
+            downloadLink.href = qr_code_canvas.toDataURL("image/png");
+        }, 300);
+    } else {
+        setTimeout(() => {
+            downloadLink.style.display = "block";
+            downloadLink.href = qr_code_img.getAttribute("src");
+        }, 300);
+    }
+}
+
   
-  function addWhiteBackground(dataURL) {
+/* function addWhiteBackground(dataURL) {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
-  
-    canvas.width = 200; 
-    canvas.height = 200;
-  
-    // Gambar latar belakang putih
-    ctx.fillStyle = "grey";
+
+    const qrCodeSize = 200; // Ukuran QR code
+    const padding = 10; // Padding yang diinginkan
+
+    canvas.width = qrCodeSize + 2 * padding; // Lebar canvas = ukuran QR code + 2x padding
+    canvas.height = qrCodeSize + 2 * padding; // Tinggi canvas = ukuran QR code + 2x padding
+
+    // Gambar latar belakang putih dengan padding
+    ctx.fillStyle = "white"; // Ganti warna latar belakang menjadi putih
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-  
-    // Gambar QR Code di tengah
+
+    // Gambar QR Code di tengah dengan padding
     const qrCodeImg = new Image();
     qrCodeImg.src = dataURL;
-    ctx.drawImage(qrCodeImg, 10, 10, 180, 180); 
-  
+    ctx.drawImage(qrCodeImg, padding, padding, qrCodeSize, qrCodeSize);
+
     return canvas.toDataURL();
-  }
-  
+}
+ */
