@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>QR Code Generator</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="Home">
+		<!-- 	<div class="qr-container">
+				<h1 class="qr-heading">QR Code Generator</h1>
+
+				<input type="text" id="text" class="qr-input" placeholder="Enter text or URL" />
+				<button id="generate" class="qr-button">Generate QR Code</button>
+				<div id="qrcode" class="qr-code"></div>
+				<a id="downloadLink" class="qr-download" style="display: none" download="qrcode.png"
+					>Download QR Code</a
+				>
+			</div> -->
+			
+			<div class="qr-container">
+				<div class="qr-heading">QR Code Generator</div>
+			<section class="user-input">
+			
+				<input type="text" name="input_text" id="input_text" class="qr-input" placeholder="Enter text or URL" autocomplete="off">
+				<button class="qr-button" type="submit">GENERATE</button>
+			</section>
+			<div class="qr-code" style="display: none;"></div>
+			<a id="downloadLink" class="qr-download" style="display: none" download="qrcode.png"
+					>Download QR Code</a
+				>
+		</div>
+		
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
