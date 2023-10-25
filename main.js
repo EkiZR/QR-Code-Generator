@@ -56,7 +56,7 @@ function generate(user_input) {
     canvas.height = 200;
   
     // Gambar latar belakang putih
-    ctx.fillStyle = "#ffffff";
+    ctx.fillStyle = "grey";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
   
     // Gambar QR Code di tengah
