@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand:wght@500;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand:wght@500;700&display=swap");
 
 * {
 	box-sizing: border-box;
@@ -8,8 +7,10 @@
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
-  background: linear-gradient(45deg, #e0e0ff, #d9d9ff);
+	font-family: "Poppins", sans-serif;
+	background-color: #4158d0;
+	background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -22,15 +23,20 @@ body {
 	max-width: 400px;
 	margin: 0 auto;
 	padding: 20px;
-	background-color: #fff;
-	border-radius: 5px;
-  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+	background: rgba(255, 255, 255, 0.24);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7px);
+	-webkit-backdrop-filter: blur(7px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .qr-heading {
 	text-align: center;
-  font-size: 30px;
-  font-weight: 700;
+	font-size: 30px;
+	color: white;
+	font-weight: 700;
+	text-shadow: #000000 1px 0 10px;
 }
 
 .qr-label {
@@ -43,15 +49,31 @@ body {
 	padding: 10px;
 	margin-bottom: 10px;
 	margin-top: 10px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.279);
+	border-radius: 6px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7px);
+	-webkit-backdrop-filter: blur(7px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	outline: none;
+	transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+	box-shadow: 0px 0px 20px -18px;
+}
+
+.qr-input:hover {
+	border: 2px solid lightgrey;
+	box-shadow: 0px 0px 20px -17px;
+}
+
+.qr-input:active {
+	transform: scale(0.95);
 }
 
 .qr-button {
 	width: 100%;
 	padding: 10px;
 	font-size: 15px;
-	background-color: #007bff;
+	background-color: #7055ca;
 	color: #fff;
 	border: none;
 	border-radius: 5px;
@@ -59,20 +81,23 @@ body {
 }
 
 .qr-button:hover {
-	background-color: #0056b3;
+	background-color: #6242cd;
 }
 
 .qr-code {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: white;
+	padding: 5%;
+	border-radius: 15pt;
 }
 
 .qr-download {
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	background-color: #007bff;
+	background-color: #7055ca;
 	color: #fff;
 	padding: 10px;
 	border-radius: 5px;
@@ -80,12 +105,20 @@ body {
 }
 
 .qr-download:hover {
-	background-color: #0056b3;
+	background-color: #6242cd;
 }
 
+#About {
+	position: absolute;
+	right: 3%;
+	top: 3%;
+	background: rgba(255, 255, 255, 0.478);
+	border: none;
+	padding: 10px;
+	border-radius: 50%;
+}
 
-/* @media screen and (max-width: 768px) {
-    .qr-code {
-        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-    }
-} */
+#About img {
+	width: 20px;
+	height: 20px;
+}

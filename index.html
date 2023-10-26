@@ -40,7 +40,6 @@
 		<meta name="robots" content="index, follow" />
 	</head>
 	<body>
-		<div class="Home">
 			<div class="qr-container">
 				<div class="qr-heading">QR Code Generator</div>
 				<section class="user-input">
@@ -58,8 +57,16 @@
 					>Download QR Code</a
 				>
 			</div>
-		</div>
 
+			<button id="About"><img src="/avatar.png" alt=""></button>
+
+		<!-- Development -->
+		<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+		<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+		<!-- Production -->
+		<script src="https://unpkg.com/@popperjs/core@2"></script>
+		<script src="https://unpkg.com/tippy.js@6"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 		<script src="main.js"></script>
 	</body>
