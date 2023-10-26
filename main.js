@@ -35,8 +35,6 @@ btn.addEventListener("click", () => {
     let qr_code_img = document.querySelector(".qr-code img");
     let qr_code_canvas = document.querySelector("canvas"); 
 
-    
-
     if (qr_code_img.getAttribute("src") == null) {
         setTimeout(() => {
             downloadLink.style.display = "block";
@@ -53,7 +51,7 @@ btn.addEventListener("click", () => {
 
 tippy('#About', {
   arrow: true,
-  content: 'Created ekizr',
+  content: 'Created By ekizr',
   animation : 'fade',
 });
 
